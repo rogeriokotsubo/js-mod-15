@@ -15,7 +15,7 @@ body:after{
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(./assets/img/fundo-praia.webp);
+  /* background-image: url(./assets/img/fundo-praia.webp); */
   background-size: cover;
   background-repeat: none;
   overflow: hidden;
@@ -99,11 +99,20 @@ body:after{
   width: 20vw;
   text-align: right;
 }
+.ctn-input input{
+  font-family: Roboto, Arial, Helvetica;
+}
+
 #ctn-fetch{
   width: 12vw;
   display: flex;
   align-items: center;
-  padding-top: 2vh;
+  padding-top: 1vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
 }
 #btn-fetch{
   width: 12vw;
@@ -117,10 +126,15 @@ body:after{
   background-color: #78787870;
   color: #000;
 }
+#msg{
+  font-size: 12px;
+  text-align: center;
+  width: 20vw;
+}
 td, th {
   border: 1px solid rgb(190,190,190);
   padding: 2px 4px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 td {

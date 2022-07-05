@@ -32,25 +32,20 @@
           <form id="frm-inputs"> 
             <div id="ctn-coins">
               <label for="lst-coins">Selecione a moeda:</label>
-              <select id="sel-coins" required>
-                <option value="" disabled selected>Selecione...</option>
-                <option value="USD-BRL" >Dólar Americano</option>
-                <option value="EUR-BRL" >Euro</option>
-                <option value="RUB-BRL" >Rublo Russo</option>
-                <option value="JPY">Iene</option>
+              <select id="sel-coins">
               </select>   
             </div>  
             <div class="ctn-date">                 
               <label class="lbl-form" for="dt-ini">Data Início:</label>
-              <input type="date" id="dt-ini" name="dt-ini" required>
+              <input type="date" id="dt-ini" name="dt-ini">
             </div>  
             <div class="ctn-date">                 
-              <label class="lbl-form" for="dt-fin">Data Início:</label>
-              <input type="date" id="dt-fin" name="dt-fin" required>
+              <label class="lbl-form" for="dt-fin">Data Final:</label>
+              <input type="date" id="dt-fin" name="dt-fin">
             </div>   
             <div id="ctn-fetch">
               <button id="btn-fetch" type="button">Buscar cotação</button>
-              <p id="msg"></p>
+              <p id="msg">&nbsp;</p>
             </div>            
           </form>
           <div id="ctn-table"> 
