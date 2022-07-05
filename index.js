@@ -182,7 +182,7 @@ function loadSelect(){
           <option value="USD-BRL" >Dólar Americano</option>
           <option value="EUR-BRL" >Euro</option>
           <option value="RUB-BRL" >Rublo Russo</option>
-          <option value="JPY">Iene</option>
+          <option value="JPY-BRL">Iene</option>
         `
         let data = [];
         return data;
@@ -206,7 +206,7 @@ function loadSelect(){
       <option value="USD-BRL" >Dólar Americano</option>
       <option value="EUR-BRL" >Euro</option>
       <option value="RUB-BRL" >Rublo Russo</option>
-      <option value="JPY">Iene</option>
+      <option value="JPY-BRL">Iene</option>
     `
     });
   }
