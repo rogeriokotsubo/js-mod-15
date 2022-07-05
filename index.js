@@ -60,7 +60,7 @@ function searchExchange() {
     // };
 
     // última cotação
-    makeRequest('https://economia.awesomeapi.com.br/json/last/'+coin,d1.toLocaleDateString());  
+    makeRequest('https://economia.awesomeapi.com.br/json/last/'+coin,lastDate.toLocaleDateString());  
     d1 = new Date(dateFin);
     d1.setDate(d1.getDate()+1);
     days = ((dateFin - dateIni)/1000/60/60/24)+1;
@@ -111,9 +111,8 @@ function searchExchange() {
           };  
         } else {
             Object.keys(data).forEach((key) => {
-                data[key]
                 let timestamp = new Date(parseInt(data[key].timestamp)*1000);
-                newCell0.innerHTML = `${date}`;
+                newCell0.innerHTML = `${timestamp.toLocaleDateString()}`;
                 newCell1.innerHTML = `${timestamp.toLocaleDateString()} ${timestamp.toLocaleTimeString()}`;
                 newCell2.innerHTML = `${parseFloat(data[key].low).toFixed(4)}`
                 newCell3.innerHTML = `${parseFloat(data[key].high).toFixed(4)}`
