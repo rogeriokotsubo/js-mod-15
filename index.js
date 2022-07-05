@@ -43,21 +43,12 @@ function searchExchange() {
     const dateIni = new Date(dtIni+' ');
     const dateFin = new Date(dtFin+' ');
     let d2 = '';
-    let d3 = '';
     let countRow = 1;
     let d1 = new Date(dateFin);
     let days = 0;
 
     const now = new Date();
     let lastDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-
-    // let returnExchange = true;
-    // while (lastDate>dateFin && returnExchange) {
-    //   d2 = lastDate.toLocaleDateString().substring(6,10)+lastDate.toLocaleDateString().substring(3,5)+lastDate.toLocaleDateString().substring(0,2)
-    //   d3 = lastDate.toLocaleDateString().substring(6,10)+'-'+lastDate.toLocaleDateString().substring(3,5)+'-'+lastDate.toLocaleDateString().substring(0,2)
-    //   returnExchange = makeRequest(url+coin+'/?start_date='+d2+'&end_date='+d2,d3,true);  
-    //   lastDate.setDate(lastDate.getDate() - 1);
-    // };
 
     // última cotação
     makeRequest('https://economia.awesomeapi.com.br/json/last/'+coin,lastDate.toLocaleDateString());  
@@ -217,8 +208,7 @@ window.addEventListener("load",() => {
   document.querySelector('body').style.cursor='wait';
   loadSelect();
   document.querySelector('body').style.cursor='default';
-  let now = new Date();
-  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const today = new Date();
   document.querySelector('#dt-ini').value=today.toLocaleDateString().substring(6,10)+'-'+today.toLocaleDateString().substring(3,5)+'-01';
   document.querySelector('#dt-fin').value=today.toLocaleDateString().substring(6,10)+'-'+today.toLocaleDateString().substring(3,5)+'-'+today.toLocaleDateString().substring(0,2)
 });
