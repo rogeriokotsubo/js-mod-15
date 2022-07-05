@@ -171,7 +171,7 @@ function loadSelect(){
   function getExchanges(){ 
     const url = 'https://economia.awesomeapi.com.br/json/available';
 
-    let listCoin = fetch(url, { method: 'GET' })
+    fetch(url, { method: 'GET' })
     .then(response => {
       if (response.status===200) {
         return response.json();
